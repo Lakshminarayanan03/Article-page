@@ -1,0 +1,8 @@
+.vscode/
+.env
+node_modules/
+dist/
+build/
+coverage/
+credentials.json
+prod-env.yaml
