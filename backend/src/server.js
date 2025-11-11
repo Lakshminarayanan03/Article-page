@@ -145,8 +145,11 @@ if (process.env.SERVE_STATIC === 'true') {
     : path.resolve(__dirname, '../dist');
 
   if (fs.existsSync(distDir) && fs.existsSync(path.join(distDir, 'index.html'))) {
+    // Serve all static assets from the dist folder
     app.use(express.static(distDir));
-    app.get(/^(?!\/api).+/, (_req, res) => {
+
+    // For any requests NOT starting with /api, serve index.html (enables React Router)
+    app.get(/^(?!\/api).*/, (_req, res) => {
       res.sendFile(path.join(distDir, 'index.html'));
     });
   } else {
