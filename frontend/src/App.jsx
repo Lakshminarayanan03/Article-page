@@ -1,6 +1,6 @@
 
 import './App.css'
-import AboutPage from './pages/aboutPage'
+import AboutPage from './pages/AboutPage'
 import ArticleListPage from './pages/ArticleListPage'
 import HomePage from './pages/HomePage'
 import {
